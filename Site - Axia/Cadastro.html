@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+	<title>Axia | Cadastro</title>
+	<meta content="" name="description">
+	<meta content="" name="keywords">
+
+	<!-- Favicons -->
+	<link href="../Site - Axia/assets/img/a.png" rel="icon">
+	<link href="../Site - Axia/assets/img/a.png" rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+		rel="stylesheet">
+
+	<!-- Vendor CSS Files -->
+	<link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+	<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+	<link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+	<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+	<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+	<!-- Template Main CSS File -->
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<!-- =======================================================
+		* Template Name: Moderna - v4.9.1
+		* Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+		* Author: BootstrapMade.com
+		* License: https://bootstrapmade.com/license/
+		======================================================== -->
+</head>
+
+<body style="background-image: url(assets/img/granulado.jpg); overflow-x: hidden;">
+	<header id="headerL" class="fixed-top d-flex align-items-center" style="position: absolute;">
+		<div class="container d-flex justify-content-between align-items-center">
+
+			<div class="logo">
+				<h1 class="text-light"><a href="index.html"><span>AXIA</span></a></h1>
+				<!-- Uncomment below if you prefer to use an image logo -->
+				<!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+			</div>
+
+			<nav id="navbar" class="navbar">
+				<ul>
+					<li><a href="index.html" class="aL">Início</a></li>
+					<li><a href="Sobre.html" class="aL">Sobre nós</a></li>
+					<li><a href="Serviços.html" class="aL">Serviços</a></li>
+					<li><a href="Contato.html" class="aL">Contato</a></li>
+					<li><a href="Login.html" class="aL">Login</a></li>
+					<li><a class="activeL" href="Cadastro.html" class="aL">Cadastro</a></li>
+				</ul>
+				<i class="bi bi-list mobile-nav-toggle" style="color: #cd9a0e;"></i>
+			</nav><!-- .navbar -->
+		</div>
+	</header><!-- End Header -->
+	<img class="waveLogin" src="../Site - Axia/assets/img/imagem-cadastro-empresa.png">
+	<div class="containerLogin">
+		<div class="imgLogin">
+			<img src="">
+		</div>
+		<div class="login-content" style="overflow-x: hidden;">
+
+			<div class="formLogin">
+				<h1 class="escrita-login">Cadastro</h1>
+				<div class="input-div one">
+					<div class="divSecreta">
+					</div>
+					<div class="div">
+						<h5>Nome</h5>
+						<input id="inpNome" type="text" name="nome" class="input">
+					</div>
+				</div>
+				<div class="input-div one">
+					<div class="divSecreta">
+					</div>
+					<div class="div">
+						<h5>CPF</h5>
+						<input id="inpCpf" type="text" class="input">
+					</div>
+				</div>
+				<div class="input-div one">
+					<div class="divSecreta">
+					</div>
+					<div class="div">
+						<h5>Telefone</h5>
+						<input id="inpTelefone" type="tel" name="telefone" class="input">
+					</div>
+				</div>
+				<div class="input-div one">
+					<div class="divSecreta">
+					</div>
+					<div class="div">
+						<h5>E-mail</h5>
+						<input id="inpEmail" type="text" name="email" class="input">
+					</div>
+				</div>
+				<div class="input-div pass">
+					<div class="iLogin">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Senha</h5>
+						<input id="inpSenha" type="password" class="input">
+					</div>
+				</div>
+
+				<div class="input-div pass">
+					<div class="iLogin">
+						<i class="fas fa-lock"></i>
+					</div>
+					<div class="div">
+						<h5>Confirme a Senha</h5>
+						<input id="inpConSenha" type="password" class="input">
+					</div>
+				</div>
+				<br>
+				<a class="aLogin" href="Login.html">Já possui cadastro?</a>
+				<button onclick="cadastrar()" class="btnLogin">Cadastrar</button>
+			</div>
+		</div>
+	</div>
+	<!------------------------------------------------------- Modal---------------------------------------------->
+	<div class="modal-containerD" id="modal_container">
+		<div class="modalD">
+			<div id="msgErro" class="msg-erro">a</div>
+			<div id="subMsg" class="sub-msg"></div>
+		</div>
+	</div>
+</body>
+
+</html>
+<script>
+	function cadastrar() {
+		const modal_container = document.getElementById('modal_container');
+		const close = document.getElementById('modal_container');
+
+		var nomeVar = inpNome.value;
+		var cpfVar = inpCpf.value;
+		var telefoneVar = inpTelefone.value;
+		var emailVar = inpEmail.value;
+		var senhaVar = inpSenha.value;
+		var conSenhaVar = inpConSenha.value;
+
+		if (nomeVar == "" || cpfVar == "" || telefoneVar == "" || emailVar == "" || senhaVar == "" || conSenhaVar == "") {
+			msgErro.innerHTML = `Preencha todos os campos para prosseguir.`
+
+			modal_container.classList.add('show');
+
+			close.addEventListener('click', () => {
+				modal_container.classList.remove('show');
+			});
+			return
+		}
+
+		if (cpfVar.length != 11) {
+			msgErro.innerHTML = `CPF Inválido.`
+			subMsg.innerHTML = `Ele deve conter 11 caracteres, não digite os pontos "." e traços "-"`
+
+			modal_container.classList.add('show');
+
+
+			close.addEventListener('click', () => {
+				modal_container.classList.remove('show');
+			});
+			return
+		}
+
+		if (telefoneVar.indexOf("(") == -1 || telefoneVar.indexOf(")") == -1 || telefoneVar.indexOf("-") == -1 || telefoneVar.length < 13) {
+			msgErro.innerHTML = `Telefone inválido.`
+			subMsg.innerHTML = `Ele deve conter 15 caracteres, incluindo "(&nbsp;)" e "-"`
+
+			modal_container.classList.add('show');
+
+
+			close.addEventListener('click', () => {
+				modal_container.classList.remove('show');
+			});
+			return
+		}
+
+		if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1) {
+			msgErro.innerHTML = `<br>Email inválido.`
+
+			modal_container.classList.add('show');
+
+
+			close.addEventListener('click', () => {
+				modal_container.classList.remove('show');
+			});
+			return
+		}
+
+		if (senhaVar != conSenhaVar) {
+			msgErro.innerHTML = `As senhas não coincidem.`
+
+			modal_container.classList.add('show');
+
+
+			close.addEventListener('click', () => {
+				modal_container.classList.remove('show');
+			});
+			return
+		}
+
+		msgErro.innerHTML = `Cadastro relizado com sucesso.`
+		subMsg.innerHTML = `Por favor aguarde você esta sendo direcionado para tela de login!`
+
+		modal_container.classList.add('show');
+
+
+		close.addEventListener('click', () => {
+			modal_container.classList.remove('show');
+		});
+
+
+		setTimeout(() => red(), 3000);
+
+
+		function red() {
+			window.location.href = "./Login.html"
+		}
+
+
+	}
+
+</script>
+<script src="assets/js/mainB.js"></script>

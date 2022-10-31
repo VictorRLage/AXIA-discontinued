@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="htmlD" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axia | Dashboard Geral | Network</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="bodyD">
+    <div class="containerD">
+        <aside>
+            <div class="topD">
+                <div class="logo">
+                    <h1 class="text-light"><a href="../index.html"><span>AXIA</span></a></h1>
+                </div>
+                <div id="closeD-btn" class="closeD">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebarD">
+                <a href="./DashboardGeralCPU.html">
+                    <span class="material-symbols-sharp">memory</span>
+                    <h3>CPU</h3>
+                </a>
+                <a href="./DashboardGeralRAM.html">
+                    <span class="material-symbols-sharp">empty_dashboard</span>
+                    <h3>Memoria RAM</h3>
+                </a>
+                <a href="./DashboardGeralDisco.html">
+                    <span class="material-symbols-sharp">save</span>
+                    <h3>Disco Rigido</h3>
+                </a>
+                <a href="./DashboardGeralNET.html" class="activeD">
+                    <span class="material-symbols-sharp">router</span>
+                    <h3>Network</h3>
+                </a>
+                <a id="open-modal-u">
+                    <span class="material-symbols-sharp">group_add</span>
+                    <h3>Adicionar usuario</h3>
+                </a>
+                <a href="https://app.pipefy.com/public/form/Gb1b1Cm1">
+                    <span class="material-symbols-sharp">contact_support</span>
+                    <h3>Suporte</h3>
+                </a>
+                <a href="../index.html">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Sair</h3>
+                </a>
+            </div>
+        </aside>
+        <main class="mainD">
+            <h1>Dashboard Geral | Network <span class="material-symbols-sharp big">router</span></h1>
+
+            <div class="date">
+                <span class="span-date">20/08/2022 17:25:22</span>
+            </div>
+            <div class="insights">
+                <!-- Grafico torre 1 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <a href="DashboardNETT1.html">
+                        <canvas id="myChart"></canvas>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- Grafico torre 2 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grafico torre 3 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grafico torre 4 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grafico torre 5 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <canvas id="myChart5"></canvas>
+                    </div>
+                </div>
+
+                <!-- Grafico torre 6 -->
+                <div class="graficos">
+                    <div class="torre">
+                        <canvas id="myChart6"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!---------------------------- FIM MAIN ---------------------------------->
+
+        <div class="direita">
+            <div class="topD">
+                <button id="menuD-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp activeD">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+                <div class="profileD">
+                    <div class="infoD">
+                        <p class="pd">Olá, <b class="bD">Brands</b></p>
+                        <small class="textD-muted">ADM</small>
+                    </div>
+                    <div class="profileD-photo">
+                        <img src="../assets/img/profile-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-------------------- FIM TOP -------------------->
+            <div class="alertas">
+                <h2>Alertas Recentes</h2>
+                <div class="updates">
+                    <div class="alert">
+                        <span id="closebtn-Alertas" class="closebtn">&times;</span>
+                        <strong>Perigo!</strong> Alerta CPU torre 1, 20/08/2022 17:25:22.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:25:20.
+                    </div>
+
+                    <div class="alert warning">
+                        <span class="closebtn">&times;</span>
+                        <strong>Alerta!</strong> Alerta RAM torre 3, 20/08/2022 17:23:20.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:21:20.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:19:20.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:17:20.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:15:20.
+                    </div>
+
+                    <div class="alert success">
+                        <span class="closebtn">&times;</span>
+                        <strong>Estavel!</strong> nenhuma anormarlidade detectada, 20/08/2022 17:13:20.
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!------------------------------------------------------- Modal--------------------------------------------l-->
+    <div class="modal-containerD" id="modal_container">
+        <div class="modalD">
+
+            <div class="login-content">
+                <br> <br>
+                <div class="formLogin">
+                    <div class="escrita-usuario">
+                        <h1>Cadastrar usuario</h1>
+                    </div>
+                    <br>
+                    <div class="input-div one">
+                        <div class="divSecreta">
+                        </div>
+                        <div class="div">
+                            <h5>E-mail</h5>
+                            <input type="text" class="input">
+                        </div>
+                    </div>
+                    <div class="input-div pass">
+                        <div class="divSecreta">
+                        </div>
+                        <div class="div">
+                            <h5>Senha</h5>
+                            <input type="password" class="input">
+                        </div>
+                    </div>
+                    <br>
+                    <button class="btnLogin">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+        <button class="button1DG" id="closeMU"><span class="material-symbols-sharp">close</span></button>
+    </div>
+    <script src="../assets/js/mainD.js"></script>
+</body>
+
+</html>
+<!-- SCRIPT ADD USUARIO -->
+<script>
+    const inputs = document.querySelectorAll(".input");
+
+
+    function addcl() {
+        let parent = this.parentNode.parentNode;
+        parent.classList.add("focus");
+    }
+
+    function remcl() {
+        let parent = this.parentNode.parentNode;
+        if (this.value == "") {
+            parent.classList.remove("focus");
+        }
+    }
+
+
+    inputs.forEach(input => {
+        input.addEventListener("focus", addcl);
+        input.addEventListener("blur", remcl);
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- GRAFICO 1 TORRE 1 -->
+<script>
+    const labels = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data = {
+        labels: labels,
+        datasets: [{
+            label: 'NET torre 1',
+            backgroundColor: 'rgb(0,0,139)',
+            borderColor: 'rgb(0,0,139)',
+            data: [8, 5, 2, 7, 2, 8],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config = {
+        type: 'line',
+        data: data,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+</script>
+
+
+<!-- GRAFICO 2 TORRE 2 -->
+<script>
+    const labels2 = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'NET torre 2',
+            backgroundColor: 'rgb(255, 0, 0',
+            borderColor: 'rgb(255, 0, 0)',
+            data: [14, 10, 9, 17, 22, 35],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config2 = {
+        type: 'line',
+        data: data2,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart2 = new Chart(
+        document.getElementById('myChart2'),
+        config2
+    );
+</script>
+
+
+<!-- GRAFICO 3 TORRE 3 -->
+<script>
+    const labels3 = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data3 = {
+        labels: labels3,
+        datasets: [{
+            label: 'NET torre 3',
+            backgroundColor: 'rgb(34,139,34)',
+            borderColor: 'rgb(34,139,34)',
+            data: [12, 23, 18, 33, 27, 43],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config3 = {
+        type: 'line',
+        data: data3,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart3 = new Chart(
+        document.getElementById('myChart3'),
+        config3
+    );
+</script>
+
+
+<!-- GRAFICO 4 TORRE 4 -->
+<script>
+    const labels4 = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data4 = {
+        labels: labels4,
+        datasets: [{
+            label: 'NET torre 4',
+            backgroundColor: 'rgb(255, 165, 0)',
+            borderColor: 'rgb(255, 165, 0)',
+            data: [13, 15, 12, 18, 20, 25],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config4 = {
+        type: 'line',
+        data: data4,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart4 = new Chart(
+        document.getElementById('myChart4'),
+        config4
+    );
+</script>
+
+
+<!-- GRAFICO 5 TORRE 5 -->
+<script>
+    const labels5 = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data5 = {
+        labels: labels5,
+        datasets: [{
+            label: 'NET torre 5',
+            backgroundColor: 'rgb(165,42,42)',
+            borderColor: 'rgb(165,42,42)',
+            data: [12, 10, 22, 18, 25, 35],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config5 = {
+        type: 'line',
+        data: data5,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart5 = new Chart(
+        document.getElementById('myChart5'),
+        config5
+    );
+</script>
+
+
+<!-- GRAFICO 6 TORRE 6 -->
+<script>
+    const labels6 = [
+        '17:15',
+        '17:17',
+        '17:19',
+        '17:21',
+        '17:23',
+        '17:25',
+    ];
+
+    const data6 = {
+        labels: labels6,
+        datasets: [{
+            label: 'NET torre 6',
+            backgroundColor: 'rgb(47, 79, 79)',
+            borderColor: 'rgb(47, 79, 79)',
+            data: [10, 14, 13, 18, 16, 22],
+        }]
+    };
+    ////////////////////////////////////////////////////////////////////////////////
+    const config6 = {
+        type: 'line',
+        data: data6,
+        options: {
+        scales: {
+            y: {
+                suggestedMin: 0,
+                suggestedMax: 100
+            }
+        }
+    }
+    };
+
+    const myChart6 = new Chart(
+        document.getElementById('myChart6'),
+        config6
+    );
+</script>
